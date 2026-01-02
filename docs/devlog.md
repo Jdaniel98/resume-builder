@@ -6,3 +6,7 @@ Tracking project progress and design decisions.
 
 Progress update for the resume builder project.
 
+## 2026-01-02 - Update README with project description
+
+Progress update for the resume builder project.
+
