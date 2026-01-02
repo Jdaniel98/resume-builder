@@ -1,0 +1,8 @@
+# Development Log
+
+Tracking project progress and design decisions.
+
+## 2026-01-02 - Add project roadmap notes
+
+Progress update for the resume builder project.
+
