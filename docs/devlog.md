@@ -14,3 +14,7 @@ Progress update for the resume builder project.
 
 Progress update for the resume builder project.
 
+## 2026-01-03 - Document component architecture
+
+Progress update for the resume builder project.
+
