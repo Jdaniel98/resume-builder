@@ -18,3 +18,7 @@ Progress update for the resume builder project.
 
 Progress update for the resume builder project.
 
+## 2026-01-06 - Add template design notes
+
+Progress update for the resume builder project.
+
