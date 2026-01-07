@@ -22,3 +22,7 @@ Progress update for the resume builder project.
 
 Progress update for the resume builder project.
 
+## 2026-01-07 - Plan PDF export improvements
+
+Progress update for the resume builder project.
+
