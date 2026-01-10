@@ -34,3 +34,7 @@ Progress update for the resume builder project.
 
 Progress update for the resume builder project.
 
+## 2026-01-10 - Note responsive design plans
+
+Progress update for the resume builder project.
+
