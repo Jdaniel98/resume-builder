@@ -42,3 +42,7 @@ Progress update for the resume builder project.
 
 Progress update for the resume builder project.
 
+## 2026-01-11 - Document resume data schema
+
+Progress update for the resume builder project.
+
