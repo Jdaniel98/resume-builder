@@ -50,3 +50,7 @@ Progress update for the resume builder project.
 
 Progress update for the resume builder project.
 
+## 2026-01-12 - Add testing strategy notes
+
+Progress update for the resume builder project.
+
