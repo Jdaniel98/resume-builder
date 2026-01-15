@@ -62,3 +62,7 @@ Progress update for the resume builder project.
 
 Progress update for the resume builder project.
 
+## 2026-01-15 - Add deployment notes
+
+Progress update for the resume builder project.
+
