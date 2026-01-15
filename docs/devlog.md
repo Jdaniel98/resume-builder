@@ -58,3 +58,7 @@ Progress update for the resume builder project.
 
 Progress update for the resume builder project.
 
+## 2026-01-15 - Plan template customization options
+
+Progress update for the resume builder project.
+
