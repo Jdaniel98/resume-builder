@@ -54,3 +54,7 @@ Progress update for the resume builder project.
 
 Progress update for the resume builder project.
 
+## 2026-01-15 - Document Markdown rendering approach
+
+Progress update for the resume builder project.
+
