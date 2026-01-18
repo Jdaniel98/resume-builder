@@ -82,3 +82,7 @@ Progress update for the resume builder project.
 
 Progress update for the resume builder project.
 
+## 2026-01-18 - Document print styling approach
+
+Progress update for the resume builder project.
+
