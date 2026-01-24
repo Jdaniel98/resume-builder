@@ -94,3 +94,7 @@ Progress update for the resume builder project.
 
 Progress update for the resume builder project.
 
+## 2026-01-24 - Document form validation plans
+
+Progress update for the resume builder project.
+
