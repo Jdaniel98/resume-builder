@@ -114,3 +114,7 @@ Progress update for the resume builder project.
 
 Progress update for the resume builder project.
 
+## 2026-01-25 - Add section reordering notes
+
+Progress update for the resume builder project.
+
