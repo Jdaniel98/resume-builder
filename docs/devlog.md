@@ -118,3 +118,7 @@ Progress update for the resume builder project.
 
 Progress update for the resume builder project.
 
+## 2026-01-26 - Plan cover letter builder
+
+Progress update for the resume builder project.
+
