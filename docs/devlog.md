@@ -130,3 +130,7 @@ Progress update for the resume builder project.
 
 Progress update for the resume builder project.
 
+## 2026-01-27 - Plan multi-resume support
+
+Progress update for the resume builder project.
+
