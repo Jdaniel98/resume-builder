@@ -134,3 +134,7 @@ Progress update for the resume builder project.
 
 Progress update for the resume builder project.
 
+## 2026-01-27 - Document JSON schema versioning
+
+Progress update for the resume builder project.
+
