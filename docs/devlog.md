@@ -146,3 +146,7 @@ Progress update for the resume builder project.
 
 Progress update for the resume builder project.
 
+## 2026-01-28 - Document error handling strategy
+
+Progress update for the resume builder project.
+
