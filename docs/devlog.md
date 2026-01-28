@@ -142,3 +142,7 @@ Progress update for the resume builder project.
 
 Progress update for the resume builder project.
 
+## 2026-01-28 - Add analytics integration notes
+
+Progress update for the resume builder project.
+
