@@ -154,3 +154,7 @@ Progress update for the resume builder project.
 
 Progress update for the resume builder project.
 
+## 2026-02-03 - Add font selection notes
+
+Progress update for the resume builder project.
+
