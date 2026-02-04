@@ -162,3 +162,7 @@ Progress update for the resume builder project.
 
 Progress update for the resume builder project.
 
+## 2026-02-04 - Document image upload plans
+
+Progress update for the resume builder project.
+
