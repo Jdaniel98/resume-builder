@@ -170,3 +170,7 @@ Progress update for the resume builder project.
 
 Progress update for the resume builder project.
 
+## 2026-02-06 - Plan certifications section
+
+Progress update for the resume builder project.
+
