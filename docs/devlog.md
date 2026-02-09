@@ -174,3 +174,7 @@ Progress update for the resume builder project.
 
 Progress update for the resume builder project.
 
+## 2026-02-09 - Document volunteer section
+
+Progress update for the resume builder project.
+
