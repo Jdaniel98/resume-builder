@@ -178,3 +178,7 @@ Progress update for the resume builder project.
 
 Progress update for the resume builder project.
 
+## 2026-02-10 - Plan references section
+
+Progress update for the resume builder project.
+
