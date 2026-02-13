@@ -182,3 +182,7 @@ Progress update for the resume builder project.
 
 Progress update for the resume builder project.
 
+## 2026-02-13 - Add custom sections notes
+
+Progress update for the resume builder project.
+
