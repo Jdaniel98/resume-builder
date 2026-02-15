@@ -186,3 +186,7 @@ Progress update for the resume builder project.
 
 Progress update for the resume builder project.
 
+## 2026-02-15 - Plan LinkedIn import feature
+
+Progress update for the resume builder project.
+
