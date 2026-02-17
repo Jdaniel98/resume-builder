@@ -190,3 +190,7 @@ Progress update for the resume builder project.
 
 Progress update for the resume builder project.
 
+## 2026-02-17 - Document API integration plans
+
+Progress update for the resume builder project.
+
