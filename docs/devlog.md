@@ -194,3 +194,7 @@ Progress update for the resume builder project.
 
 Progress update for the resume builder project.
 
+## 2026-02-17 - Add CI/CD pipeline notes
+
+Progress update for the resume builder project.
+
