@@ -202,3 +202,7 @@ Progress update for the resume builder project.
 
 Progress update for the resume builder project.
 
+## 2026-02-20 - Document SEO considerations
+
+Progress update for the resume builder project.
+
