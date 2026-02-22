@@ -206,3 +206,7 @@ Progress update for the resume builder project.
 
 Progress update for the resume builder project.
 
+## 2026-02-22 - Plan PWA support
+
+Progress update for the resume builder project.
+
