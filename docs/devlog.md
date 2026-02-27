@@ -222,3 +222,7 @@ Progress update for the resume builder project.
 
 Progress update for the resume builder project.
 
+## 2026-02-27 - Plan user preferences
+
+Progress update for the resume builder project.
+
