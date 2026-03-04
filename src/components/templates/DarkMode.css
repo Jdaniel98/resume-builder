@@ -1,0 +1,50 @@
+.dark-mode {
+  --bg-primary: #0f172a;
+  --bg-secondary: #1e293b;
+  --bg-card: #1e293b;
+  --text-primary: #f1f5f9;
+  --text-secondary: #94a3b8;
+  --border-color: #334155;
+  --accent: #3b82f6;
+  --input-bg: #0f172a;
+}
+
+body.dark-mode {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+body.dark-mode header {
+  background-color: var(--bg-secondary);
+  border-color: var(--border-color);
+}
+
+body.dark-mode .bg-gray-50 {
+  background-color: var(--bg-primary);
+}
+
+body.dark-mode .bg-white {
+  background-color: var(--bg-secondary);
+}
+
+body.dark-mode .border-gray-200,
+body.dark-mode .border-gray-100 {
+  border-color: var(--border-color);
+}
+
+body.dark-mode .text-gray-800 {
+  color: var(--text-primary);
+}
+
+body.dark-mode .text-gray-600,
+body.dark-mode .text-gray-500 {
+  color: var(--text-secondary);
+}
+
+body.dark-mode input,
+body.dark-mode textarea,
+body.dark-mode select {
+  background-color: var(--input-bg);
+  color: var(--text-primary);
+  border-color: var(--border-color);
+}
