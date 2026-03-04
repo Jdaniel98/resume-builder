@@ -1,5 +1,6 @@
 import type { RefObject } from 'react';
 import { TemplateSelector } from '../actions/TemplateSelector';
+import { DarkModeToggle } from '../actions/DarkModeToggle';
 import { SaveJsonButton } from '../actions/SaveJsonButton';
 import { ImportJsonButton } from '../actions/ImportJsonButton';
 import { ExportPdfButton } from '../actions/ExportPdfButton';
@@ -20,6 +21,7 @@ export function Header({ previewRef }: HeaderProps) {
       </div>
       <div className="flex items-center gap-2">
         <TemplateSelector />
+        <DarkModeToggle />
         <div className="w-px h-6 bg-gray-200" />
         <ImportJsonButton />
         <SaveJsonButton />

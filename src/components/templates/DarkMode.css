@@ -1,50 +1,177 @@
+/* Dark mode custom properties */
 .dark-mode {
   --bg-primary: #0f172a;
   --bg-secondary: #1e293b;
   --bg-card: #1e293b;
+  --bg-input: #0f172a;
   --text-primary: #f1f5f9;
   --text-secondary: #94a3b8;
+  --text-muted: #64748b;
   --border-color: #334155;
+  --border-light: #1e293b;
   --accent: #3b82f6;
-  --input-bg: #0f172a;
+  --hover-bg: #334155;
 }
 
+/* Body & root */
 body.dark-mode {
   background-color: var(--bg-primary);
   color: var(--text-primary);
 }
 
+/* Header */
 body.dark-mode header {
-  background-color: var(--bg-secondary);
-  border-color: var(--border-color);
+  background-color: var(--bg-secondary) !important;
+  border-color: var(--border-color) !important;
 }
 
-body.dark-mode .bg-gray-50 {
-  background-color: var(--bg-primary);
-}
-
-body.dark-mode .bg-white {
-  background-color: var(--bg-secondary);
-}
-
-body.dark-mode .border-gray-200,
-body.dark-mode .border-gray-100 {
-  border-color: var(--border-color);
-}
-
-body.dark-mode .text-gray-800 {
+body.dark-mode header h1 {
   color: var(--text-primary);
 }
 
-body.dark-mode .text-gray-600,
-body.dark-mode .text-gray-500 {
-  color: var(--text-secondary);
+/* Editor panel background */
+body.dark-mode .bg-gray-50 {
+  background-color: var(--bg-primary) !important;
 }
 
+/* Cards, panels, white backgrounds */
+body.dark-mode .bg-white {
+  background-color: var(--bg-secondary) !important;
+}
+
+/* Nested entry cards (experience, education items) */
+body.dark-mode .bg-gray-50 .bg-gray-50 {
+  background-color: var(--bg-primary) !important;
+}
+
+/* Borders */
+body.dark-mode .border-gray-200 {
+  border-color: var(--border-color) !important;
+}
+
+body.dark-mode .border-gray-100 {
+  border-color: var(--border-light) !important;
+}
+
+body.dark-mode .border-gray-300 {
+  border-color: var(--border-color) !important;
+}
+
+body.dark-mode .border-blue-200 {
+  border-color: #1e3a5f !important;
+}
+
+/* Text colors */
+body.dark-mode .text-gray-800 {
+  color: var(--text-primary) !important;
+}
+
+body.dark-mode .text-gray-700 {
+  color: #cbd5e1 !important;
+}
+
+body.dark-mode .text-gray-600 {
+  color: var(--text-secondary) !important;
+}
+
+body.dark-mode .text-gray-500 {
+  color: var(--text-muted) !important;
+}
+
+body.dark-mode .text-gray-400 {
+  color: #475569 !important;
+}
+
+/* Form inputs */
 body.dark-mode input,
 body.dark-mode textarea,
 body.dark-mode select {
-  background-color: var(--input-bg);
-  color: var(--text-primary);
-  border-color: var(--border-color);
+  background-color: var(--bg-input) !important;
+  color: var(--text-primary) !important;
+  border-color: var(--border-color) !important;
+}
+
+body.dark-mode input::placeholder,
+body.dark-mode textarea::placeholder {
+  color: var(--text-muted) !important;
+}
+
+body.dark-mode input:focus,
+body.dark-mode textarea:focus,
+body.dark-mode select:focus {
+  border-color: var(--accent) !important;
+}
+
+/* Buttons */
+body.dark-mode button.hover\:bg-gray-50:hover {
+  background-color: var(--hover-bg) !important;
+}
+
+body.dark-mode button.hover\:bg-gray-100:hover,
+body.dark-mode .dark-toggle:hover {
+  background-color: var(--hover-bg) !important;
+}
+
+body.dark-mode .hover\:bg-blue-50:hover {
+  background-color: #1e3a5f !important;
+}
+
+/* Action buttons in header */
+body.dark-mode button.border-gray-300 {
+  background-color: var(--bg-primary) !important;
+  color: var(--text-secondary) !important;
+  border-color: var(--border-color) !important;
+}
+
+body.dark-mode button.border-gray-300:hover {
+  background-color: var(--hover-bg) !important;
+}
+
+/* Skill tags */
+body.dark-mode .bg-blue-100 {
+  background-color: #1e3a5f !important;
+  color: #93c5fd !important;
+}
+
+/* Divider in header */
+body.dark-mode .bg-gray-200 {
+  background-color: var(--border-color) !important;
+}
+
+/* Resize handle */
+body.dark-mode [data-separator] {
+  background-color: var(--border-color) !important;
+}
+
+/* Scrollbar */
+body.dark-mode ::-webkit-scrollbar {
+  width: 8px;
+}
+
+body.dark-mode ::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+body.dark-mode ::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 4px;
+}
+
+body.dark-mode ::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}
+
+/* Preview panel - keep white for resume readability */
+body.dark-mode .resume-preview {
+  background-color: #ffffff !important;
+  color: #1a1a1a !important;
+}
+
+/* Don't apply dark mode to print */
+@media print {
+  body.dark-mode,
+  body.dark-mode * {
+    background-color: transparent !important;
+    color: inherit !important;
+  }
 }

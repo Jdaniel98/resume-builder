@@ -16,6 +16,7 @@ const savedData = loadFromLocalStorage();
 interface ResumeStore {
   resumeData: ResumeData;
   templateName: TemplateName;
+  darkMode: boolean;
 
   updatePersonal: (field: keyof PersonalInfo, value: string) => void;
 
@@ -37,6 +38,7 @@ interface ResumeStore {
   removeProject: (id: string) => void;
 
   setTemplate: (name: TemplateName) => void;
+  toggleDarkMode: () => void;
   loadFromJson: (data: ResumeData) => void;
   resetToDefault: () => void;
 }
@@ -44,6 +46,7 @@ interface ResumeStore {
 export const useResumeStore = create<ResumeStore>((set) => ({
   resumeData: savedData ?? defaultResume,
   templateName: 'classic',
+  darkMode: localStorage.getItem('resume-builder-dark') === 'true',
 
   updatePersonal: (field, value) =>
     set((state) => ({
@@ -200,6 +203,14 @@ export const useResumeStore = create<ResumeStore>((set) => ({
     })),
 
   setTemplate: (name) => set({ templateName: name }),
+
+  toggleDarkMode: () =>
+    set((state) => {
+      const next = !state.darkMode;
+      localStorage.setItem('resume-builder-dark', String(next));
+      document.body.classList.toggle('dark-mode', next);
+      return { darkMode: next };
+    }),
 
   loadFromJson: (data) => set({ resumeData: data }),
 
