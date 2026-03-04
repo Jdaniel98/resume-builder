@@ -1,0 +1,111 @@
+.resume-preview[data-template="modern"] {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  color: #1e293b;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2.5rem;
+  line-height: 1.6;
+  border-left: 4px solid #3b82f6;
+}
+
+.resume-preview[data-template="modern"] h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 0.25rem;
+  letter-spacing: -0.02em;
+}
+
+.resume-preview[data-template="modern"] h1 + p {
+  font-size: 1.1rem;
+  color: #3b82f6;
+  font-weight: 500;
+  margin: 0.25rem 0;
+}
+
+.resume-preview[data-template="modern"] h1 + p + p {
+  font-size: 0.85rem;
+  color: #64748b;
+  margin: 0.25rem 0 1.25rem;
+}
+
+.resume-preview[data-template="modern"] h2 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #0f172a;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin: 1.75rem 0 0.75rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 2px solid #3b82f6;
+}
+
+.resume-preview[data-template="modern"] h3 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin: 0.75rem 0 0.15rem;
+}
+
+.resume-preview[data-template="modern"] p {
+  margin: 0.25rem 0;
+  font-size: 0.875rem;
+  color: #334155;
+}
+
+.resume-preview[data-template="modern"] ul {
+  margin: 0.25rem 0;
+  padding-left: 1.25rem;
+}
+
+.resume-preview[data-template="modern"] li {
+  font-size: 0.875rem;
+  margin: 0.2rem 0;
+  color: #334155;
+}
+
+.resume-preview[data-template="modern"] li::marker {
+  color: #3b82f6;
+}
+
+.resume-preview[data-template="modern"] a {
+  color: #3b82f6;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.resume-preview[data-template="modern"] a:hover {
+  text-decoration: underline;
+}
+
+.resume-preview[data-template="modern"] strong {
+  color: #0f172a;
+}
+
+.resume-preview[data-template="modern"] em {
+  color: #64748b;
+  font-style: normal;
+}
+
+@media print {
+  .resume-preview[data-template="modern"] {
+    padding: 0;
+    padding-left: 12pt;
+    border-left-width: 3px;
+    font-size: 10pt;
+  }
+
+  .resume-preview[data-template="modern"] h1 {
+    font-size: 16pt;
+  }
+
+  .resume-preview[data-template="modern"] h2 {
+    font-size: 10pt;
+    margin-top: 12pt;
+  }
+
+  .resume-preview[data-template="modern"] h3,
+  .resume-preview[data-template="modern"] ul {
+    break-inside: avoid;
+  }
+}

@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+body {
+  margin: 0;
+  overflow: hidden;
+  height: 100vh;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+#root {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Print styles */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  .resume-preview,
+  .resume-preview * {
+    visibility: visible !important;
+  }
+  .resume-preview {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+}
+
+@page {
+  size: A4;
+  margin: 16mm;
+}

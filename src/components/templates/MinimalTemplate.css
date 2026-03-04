@@ -1,0 +1,115 @@
+.resume-preview[data-template="minimal"] {
+  font-family: system-ui, -apple-system, sans-serif;
+  color: #111827;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2.5rem;
+  line-height: 1.7;
+}
+
+.resume-preview[data-template="minimal"] h1 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #111827;
+  margin: 0 0 0.15rem;
+  letter-spacing: 0.02em;
+}
+
+.resume-preview[data-template="minimal"] h1 + p {
+  font-size: 0.95rem;
+  color: #6b7280;
+  font-weight: 400;
+  margin: 0.15rem 0;
+}
+
+.resume-preview[data-template="minimal"] h1 + p + p {
+  font-size: 0.8rem;
+  color: #9ca3af;
+  margin: 0.15rem 0 1.5rem;
+  letter-spacing: 0.02em;
+}
+
+.resume-preview[data-template="minimal"] h2 {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin: 2rem 0 0.75rem;
+  padding: 0;
+  border: none;
+}
+
+.resume-preview[data-template="minimal"] h3 {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #111827;
+  margin: 0.75rem 0 0.1rem;
+}
+
+.resume-preview[data-template="minimal"] p {
+  margin: 0.15rem 0;
+  font-size: 0.85rem;
+  color: #374151;
+}
+
+.resume-preview[data-template="minimal"] ul {
+  margin: 0.15rem 0;
+  padding-left: 1rem;
+  list-style-type: none;
+}
+
+.resume-preview[data-template="minimal"] li {
+  font-size: 0.85rem;
+  margin: 0.1rem 0;
+  color: #374151;
+  position: relative;
+  padding-left: 0.75rem;
+}
+
+.resume-preview[data-template="minimal"] li::before {
+  content: '—';
+  position: absolute;
+  left: -0.5rem;
+  color: #d1d5db;
+}
+
+.resume-preview[data-template="minimal"] a {
+  color: #111827;
+  text-decoration: none;
+  border-bottom: 1px solid #d1d5db;
+}
+
+.resume-preview[data-template="minimal"] a:hover {
+  border-bottom-color: #111827;
+}
+
+.resume-preview[data-template="minimal"] strong {
+  font-weight: 500;
+}
+
+.resume-preview[data-template="minimal"] em {
+  color: #9ca3af;
+  font-style: normal;
+}
+
+@media print {
+  .resume-preview[data-template="minimal"] {
+    padding: 0;
+    font-size: 10pt;
+  }
+
+  .resume-preview[data-template="minimal"] h1 {
+    font-size: 14pt;
+  }
+
+  .resume-preview[data-template="minimal"] h2 {
+    font-size: 8pt;
+    margin-top: 14pt;
+  }
+
+  .resume-preview[data-template="minimal"] h3,
+  .resume-preview[data-template="minimal"] ul {
+    break-inside: avoid;
+  }
+}

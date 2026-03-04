@@ -1,0 +1,102 @@
+.resume-preview[data-template="classic"] {
+  font-family: Georgia, 'Times New Roman', serif;
+  color: #1a1a1a;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2.5rem;
+  line-height: 1.6;
+}
+
+.resume-preview[data-template="classic"] h1 {
+  font-size: 1.75rem;
+  color: #1a365d;
+  margin: 0 0 0.25rem;
+  border-bottom: 2px solid #1a365d;
+  padding-bottom: 0.5rem;
+}
+
+.resume-preview[data-template="classic"] h1 + p {
+  font-size: 1.05rem;
+  color: #4a5568;
+  margin: 0.25rem 0;
+}
+
+.resume-preview[data-template="classic"] h1 + p + p {
+  font-size: 0.85rem;
+  color: #718096;
+  margin: 0.25rem 0 1rem;
+}
+
+.resume-preview[data-template="classic"] h2 {
+  font-size: 1.1rem;
+  color: #1a365d;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  border-bottom: 1px solid #cbd5e0;
+  padding-bottom: 0.25rem;
+  margin: 1.5rem 0 0.75rem;
+}
+
+.resume-preview[data-template="classic"] h3 {
+  font-size: 1rem;
+  color: #2d3748;
+  margin: 0.75rem 0 0.25rem;
+}
+
+.resume-preview[data-template="classic"] p {
+  margin: 0.25rem 0;
+  font-size: 0.9rem;
+}
+
+.resume-preview[data-template="classic"] ul {
+  margin: 0.25rem 0;
+  padding-left: 1.25rem;
+}
+
+.resume-preview[data-template="classic"] li {
+  font-size: 0.9rem;
+  margin: 0.15rem 0;
+}
+
+.resume-preview[data-template="classic"] a {
+  color: #1a365d;
+  text-decoration: none;
+}
+
+.resume-preview[data-template="classic"] a:hover {
+  text-decoration: underline;
+}
+
+.resume-preview[data-template="classic"] em {
+  color: #4a5568;
+}
+
+@media print {
+  .resume-preview[data-template="classic"] {
+    padding: 0;
+    font-size: 10pt;
+  }
+
+  .resume-preview[data-template="classic"] h1 {
+    font-size: 16pt;
+  }
+
+  .resume-preview[data-template="classic"] h2 {
+    font-size: 11pt;
+    margin-top: 12pt;
+  }
+
+  .resume-preview[data-template="classic"] h3 {
+    font-size: 10.5pt;
+  }
+
+  .resume-preview[data-template="classic"] p,
+  .resume-preview[data-template="classic"] li {
+    font-size: 9.5pt;
+  }
+
+  .resume-preview[data-template="classic"] h3,
+  .resume-preview[data-template="classic"] ul {
+    break-inside: avoid;
+  }
+}
