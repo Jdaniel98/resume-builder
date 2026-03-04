@@ -9,6 +9,9 @@ import type {
   Project,
 } from '../types/resume';
 import { defaultResume } from '../data/defaultResume';
+import { loadFromLocalStorage, saveToLocalStorage, clearLocalStorage } from '../utils/autosave';
+
+const savedData = loadFromLocalStorage();
 
 interface ResumeStore {
   resumeData: ResumeData;
@@ -39,7 +42,7 @@ interface ResumeStore {
 }
 
 export const useResumeStore = create<ResumeStore>((set) => ({
-  resumeData: defaultResume,
+  resumeData: savedData ?? defaultResume,
   templateName: 'classic',
 
   updatePersonal: (field, value) =>
@@ -200,5 +203,13 @@ export const useResumeStore = create<ResumeStore>((set) => ({
 
   loadFromJson: (data) => set({ resumeData: data }),
 
-  resetToDefault: () => set({ resumeData: defaultResume }),
+  resetToDefault: () => {
+    clearLocalStorage();
+    set({ resumeData: defaultResume });
+  },
 }));
+
+// Auto-save on every resumeData change
+useResumeStore.subscribe(
+  (state) => saveToLocalStorage(state.resumeData)
+);
