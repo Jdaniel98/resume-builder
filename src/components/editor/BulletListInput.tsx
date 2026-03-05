@@ -1,4 +1,5 @@
 import { Plus, X } from 'lucide-react';
+import { BulletEnhancer } from './BulletEnhancer';
 
 interface BulletListInputProps {
   bullets: string[];
@@ -35,6 +36,10 @@ export function BulletListInput({ bullets, onChange }: BulletListInputProps) {
             onChange={(e) => updateBullet(i, e.target.value)}
             placeholder="Describe an achievement or responsibility..."
             className="flex-1 px-3 py-1.5 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          />
+          <BulletEnhancer
+            bullet={bullet}
+            onApply={(enhanced) => updateBullet(i, enhanced)}
           />
           <button
             type="button"
