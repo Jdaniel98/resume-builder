@@ -5,6 +5,7 @@ import { SaveJsonButton } from '../actions/SaveJsonButton';
 import { ImportJsonButton } from '../actions/ImportJsonButton';
 import { ExportPdfButton } from '../actions/ExportPdfButton';
 import { UndoRedoButtons } from '../actions/UndoRedoButtons';
+import { ATSScoreButton } from '../actions/ATSScoreButton';
 import { FileText } from 'lucide-react';
 
 interface HeaderProps {
@@ -33,6 +34,7 @@ export function Header({ previewRef }: HeaderProps) {
         <TemplateSelector />
         <DarkModeToggle />
         <div className="w-px h-6 bg-gray-200 mx-0.5 hidden sm:block" />
+        <ATSScoreButton />
         <ImportJsonButton />
         <SaveJsonButton />
         <ExportPdfButton contentRef={previewRef} />
