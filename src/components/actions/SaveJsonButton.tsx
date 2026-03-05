@@ -13,7 +13,7 @@ export function SaveJsonButton() {
       title="Save as JSON"
     >
       <Save className="w-4 h-4" />
-      Save
+      <span className="hidden sm:inline">Save</span>
     </button>
   );
 }

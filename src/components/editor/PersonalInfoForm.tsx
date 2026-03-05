@@ -18,7 +18,7 @@ export function PersonalInfoForm() {
 
   return (
     <SectionCard title="Personal Information">
-      <div className="grid grid-cols-2 gap-3">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
         {fields.map((f) =>
           f.multiline ? (
             <div key={f.key} className="col-span-2">

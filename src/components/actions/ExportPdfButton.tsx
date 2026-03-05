@@ -20,7 +20,7 @@ export function ExportPdfButton({ contentRef }: ExportPdfButtonProps) {
       title="Export as PDF"
     >
       <FileDown className="w-4 h-4" />
-      Export PDF
+      <span className="hidden sm:inline">Export PDF</span>
     </button>
   );
 }

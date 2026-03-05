@@ -35,7 +35,7 @@ export function ImportJsonButton() {
         title="Import JSON"
       >
         <Upload className="w-4 h-4" />
-        Import
+        <span className="hidden sm:inline">Import</span>
       </button>
     </>
   );

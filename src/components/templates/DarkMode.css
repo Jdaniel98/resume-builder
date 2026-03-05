@@ -143,6 +143,12 @@ body.dark-mode [data-separator] {
   background-color: var(--border-color) !important;
 }
 
+/* Mobile tab bar */
+body.dark-mode .mobile-tab-bar {
+  background-color: var(--bg-secondary) !important;
+  border-color: var(--border-color) !important;
+}
+
 /* Scrollbar */
 body.dark-mode ::-webkit-scrollbar {
   width: 8px;

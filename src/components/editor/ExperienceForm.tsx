@@ -30,7 +30,7 @@ export function ExperienceForm() {
                 <Trash2 className="w-3.5 h-3.5" />
               </button>
             </div>
-            <div className="grid grid-cols-2 gap-2">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
               <div>
                 <label className="block text-xs font-medium text-gray-600 mb-1">
                   Job Title
@@ -70,7 +70,7 @@ export function ExperienceForm() {
                   className="w-full px-3 py-1.5 text-sm border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 />
               </div>
-              <div className="grid grid-cols-2 gap-2">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                 <div>
                   <label className="block text-xs font-medium text-gray-600 mb-1">
                     Start Date

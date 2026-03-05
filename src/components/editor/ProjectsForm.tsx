@@ -29,7 +29,7 @@ export function ProjectsForm() {
                 <Trash2 className="w-3.5 h-3.5" />
               </button>
             </div>
-            <div className="grid grid-cols-2 gap-2">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
               <div>
                 <label className="block text-xs font-medium text-gray-600 mb-1">
                   Project Name
