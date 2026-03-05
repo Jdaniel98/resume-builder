@@ -1,5 +1,6 @@
 import { useResumeStore } from '../../store/useResumeStore';
 import { SectionCard } from './SectionCard';
+import { SortableList, SortableItem, DragHandle } from './SortableList';
 import { Plus, Trash2 } from 'lucide-react';
 
 export function EducationForm() {
@@ -7,6 +8,7 @@ export function EducationForm() {
   const addEducation = useResumeStore((s) => s.addEducation);
   const updateEducation = useResumeStore((s) => s.updateEducation);
   const removeEducation = useResumeStore((s) => s.removeEducation);
+  const reorderEducation = useResumeStore((s) => s.reorderEducation);
 
   return (
     <SectionCard title="Education">
@@ -16,15 +18,19 @@ export function EducationForm() {
             No education added yet. Click below to add your first entry.
           </p>
         )}
+        <SortableList items={education} onReorder={reorderEducation}>
         {education.map((edu, index) => (
+          <SortableItem key={edu.id} id={edu.id}>
           <div
-            key={edu.id}
             className="border border-gray-100 rounded-lg p-3 space-y-3 bg-gray-50/80 hover:border-gray-200 transition-colors"
           >
             <div className="flex items-center justify-between">
-              <span className="text-[11px] font-semibold text-gray-400 uppercase tracking-wider">
-                Education {index + 1}
-              </span>
+              <div className="flex items-center gap-1.5">
+                <DragHandle id={edu.id} />
+                <span className="text-[11px] font-semibold text-gray-400 uppercase tracking-wider">
+                  Education {index + 1}
+                </span>
+              </div>
               <button
                 type="button"
                 onClick={() => removeEducation(edu.id)}
@@ -121,7 +127,9 @@ export function EducationForm() {
               </div>
             </div>
           </div>
+          </SortableItem>
         ))}
+        </SortableList>
         <button
           type="button"
           onClick={addEducation}

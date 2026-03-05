@@ -1,5 +1,6 @@
 import { useResumeStore } from '../../store/useResumeStore';
 import { SectionCard } from './SectionCard';
+import { SortableList, SortableItem, DragHandle } from './SortableList';
 import { Plus, Trash2, X } from 'lucide-react';
 import { useState, type KeyboardEvent } from 'react';
 
@@ -71,6 +72,7 @@ export function SkillsForm() {
   const addSkillGroup = useResumeStore((s) => s.addSkillGroup);
   const updateSkillGroup = useResumeStore((s) => s.updateSkillGroup);
   const removeSkillGroup = useResumeStore((s) => s.removeSkillGroup);
+  const reorderSkills = useResumeStore((s) => s.reorderSkills);
 
   return (
     <SectionCard title="Skills">
@@ -80,15 +82,19 @@ export function SkillsForm() {
             No skill groups added yet. Click below to add your first group.
           </p>
         )}
+        <SortableList items={skills} onReorder={reorderSkills}>
         {skills.map((group, index) => (
+          <SortableItem key={group.id} id={group.id}>
           <div
-            key={group.id}
             className="border border-gray-100 rounded-lg p-3 space-y-2 bg-gray-50/80 hover:border-gray-200 transition-colors"
           >
             <div className="flex items-center justify-between">
-              <span className="text-[11px] font-semibold text-gray-400 uppercase tracking-wider">
-                Group {index + 1}
-              </span>
+              <div className="flex items-center gap-1.5">
+                <DragHandle id={group.id} />
+                <span className="text-[11px] font-semibold text-gray-400 uppercase tracking-wider">
+                  Group {index + 1}
+                </span>
+              </div>
               <button
                 type="button"
                 onClick={() => removeSkillGroup(group.id)}
@@ -122,7 +128,9 @@ export function SkillsForm() {
               />
             </div>
           </div>
+          </SortableItem>
         ))}
+        </SortableList>
         <button
           type="button"
           onClick={addSkillGroup}

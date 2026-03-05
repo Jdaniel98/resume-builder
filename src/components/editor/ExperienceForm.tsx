@@ -1,6 +1,7 @@
 import { useResumeStore } from '../../store/useResumeStore';
 import { SectionCard } from './SectionCard';
 import { BulletListInput } from './BulletListInput';
+import { SortableList, SortableItem, DragHandle } from './SortableList';
 import { Plus, Trash2 } from 'lucide-react';
 
 export function ExperienceForm() {
@@ -8,6 +9,7 @@ export function ExperienceForm() {
   const addExperience = useResumeStore((s) => s.addExperience);
   const updateExperience = useResumeStore((s) => s.updateExperience);
   const removeExperience = useResumeStore((s) => s.removeExperience);
+  const reorderExperience = useResumeStore((s) => s.reorderExperience);
 
   return (
     <SectionCard title="Experience">
@@ -17,15 +19,19 @@ export function ExperienceForm() {
             No experience added yet. Click below to add your first position.
           </p>
         )}
+        <SortableList items={experience} onReorder={reorderExperience}>
         {experience.map((exp, index) => (
+          <SortableItem key={exp.id} id={exp.id}>
           <div
-            key={exp.id}
             className="border border-gray-100 rounded-lg p-3 space-y-3 bg-gray-50/80 hover:border-gray-200 transition-colors"
           >
             <div className="flex items-center justify-between">
-              <span className="text-[11px] font-semibold text-gray-400 uppercase tracking-wider">
-                Position {index + 1}
-              </span>
+              <div className="flex items-center gap-1.5">
+                <DragHandle id={exp.id} />
+                <span className="text-[11px] font-semibold text-gray-400 uppercase tracking-wider">
+                  Position {index + 1}
+                </span>
+              </div>
               <button
                 type="button"
                 onClick={() => removeExperience(exp.id)}
@@ -114,7 +120,9 @@ export function ExperienceForm() {
               onChange={(bullets) => updateExperience(exp.id, { bullets })}
             />
           </div>
+          </SortableItem>
         ))}
+        </SortableList>
         <button
           type="button"
           onClick={addExperience}

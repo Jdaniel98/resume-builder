@@ -1,5 +1,6 @@
 import { useResumeStore } from '../../store/useResumeStore';
 import { SectionCard } from './SectionCard';
+import { SortableList, SortableItem, DragHandle } from './SortableList';
 import { Plus, Trash2 } from 'lucide-react';
 
 export function ProjectsForm() {
@@ -7,6 +8,7 @@ export function ProjectsForm() {
   const addProject = useResumeStore((s) => s.addProject);
   const updateProject = useResumeStore((s) => s.updateProject);
   const removeProject = useResumeStore((s) => s.removeProject);
+  const reorderProjects = useResumeStore((s) => s.reorderProjects);
 
   return (
     <SectionCard title="Projects">
@@ -16,15 +18,19 @@ export function ProjectsForm() {
             No projects added yet. Click below to showcase your work.
           </p>
         )}
+        <SortableList items={projects} onReorder={reorderProjects}>
         {projects.map((proj, index) => (
+          <SortableItem key={proj.id} id={proj.id}>
           <div
-            key={proj.id}
             className="border border-gray-100 rounded-lg p-3 space-y-3 bg-gray-50/80 hover:border-gray-200 transition-colors"
           >
             <div className="flex items-center justify-between">
-              <span className="text-[11px] font-semibold text-gray-400 uppercase tracking-wider">
-                Project {index + 1}
-              </span>
+              <div className="flex items-center gap-1.5">
+                <DragHandle id={proj.id} />
+                <span className="text-[11px] font-semibold text-gray-400 uppercase tracking-wider">
+                  Project {index + 1}
+                </span>
+              </div>
               <button
                 type="button"
                 onClick={() => removeProject(proj.id)}
@@ -97,7 +103,9 @@ export function ProjectsForm() {
               </div>
             </div>
           </div>
+          </SortableItem>
         ))}
+        </SortableList>
         <button
           type="button"
           onClick={addProject}
