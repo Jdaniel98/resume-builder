@@ -31,7 +31,7 @@ export function ImportJsonButton() {
       <button
         type="button"
         onClick={() => inputRef.current?.click()}
-        className="flex items-center gap-1.5 px-3 py-1.5 text-sm text-gray-700 border border-gray-300 rounded-md hover:bg-gray-50 transition-colors"
+        className="flex items-center gap-1.5 px-3 py-1.5 text-sm text-gray-600 border border-gray-200 rounded-lg hover:bg-gray-50 hover:border-gray-300 transition-all"
         title="Import JSON"
       >
         <Upload className="w-4 h-4" />

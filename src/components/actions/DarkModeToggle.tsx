@@ -15,7 +15,7 @@ export function DarkModeToggle() {
     <button
       type="button"
       onClick={toggleDarkMode}
-      className="p-1.5 rounded-md text-gray-500 hover:bg-gray-100 dark-toggle transition-colors"
+      className="p-1.5 rounded-lg text-gray-400 hover:text-gray-600 hover:bg-gray-100 dark-toggle transition-all"
       title={darkMode ? 'Switch to light mode' : 'Switch to dark mode'}
     >
       {darkMode ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}

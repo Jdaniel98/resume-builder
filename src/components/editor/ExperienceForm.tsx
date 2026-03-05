@@ -11,20 +11,25 @@ export function ExperienceForm() {
 
   return (
     <SectionCard title="Experience">
-      <div className="space-y-4">
+      <div className="space-y-3">
+        {experience.length === 0 && (
+          <p className="text-xs text-gray-400 text-center py-4">
+            No experience added yet. Click below to add your first position.
+          </p>
+        )}
         {experience.map((exp, index) => (
           <div
             key={exp.id}
-            className="border border-gray-100 rounded-md p-3 space-y-3 bg-gray-50"
+            className="border border-gray-100 rounded-lg p-3 space-y-3 bg-gray-50/80 hover:border-gray-200 transition-colors"
           >
             <div className="flex items-center justify-between">
-              <span className="text-xs font-medium text-gray-500">
+              <span className="text-[11px] font-semibold text-gray-400 uppercase tracking-wider">
                 Position {index + 1}
               </span>
               <button
                 type="button"
                 onClick={() => removeExperience(exp.id)}
-                className="p-1 text-gray-400 hover:text-red-500 transition-colors"
+                className="p-1 text-gray-300 hover:text-red-500 transition-colors rounded-md hover:bg-red-50"
                 title="Remove"
               >
                 <Trash2 className="w-3.5 h-3.5" />
@@ -32,7 +37,7 @@ export function ExperienceForm() {
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
               <div>
-                <label className="block text-xs font-medium text-gray-600 mb-1">
+                <label className="block text-xs font-medium text-gray-500 mb-1">
                   Job Title
                 </label>
                 <input
@@ -41,11 +46,12 @@ export function ExperienceForm() {
                   onChange={(e) =>
                     updateExperience(exp.id, { role: e.target.value })
                   }
-                  className="w-full px-3 py-1.5 text-sm border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  placeholder="Software Engineer"
+                  className="w-full px-3 py-1.5 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 />
               </div>
               <div>
-                <label className="block text-xs font-medium text-gray-600 mb-1">
+                <label className="block text-xs font-medium text-gray-500 mb-1">
                   Company
                 </label>
                 <input
@@ -54,11 +60,12 @@ export function ExperienceForm() {
                   onChange={(e) =>
                     updateExperience(exp.id, { company: e.target.value })
                   }
-                  className="w-full px-3 py-1.5 text-sm border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  placeholder="Acme Corp"
+                  className="w-full px-3 py-1.5 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 />
               </div>
               <div>
-                <label className="block text-xs font-medium text-gray-600 mb-1">
+                <label className="block text-xs font-medium text-gray-500 mb-1">
                   Location
                 </label>
                 <input
@@ -67,12 +74,13 @@ export function ExperienceForm() {
                   onChange={(e) =>
                     updateExperience(exp.id, { location: e.target.value })
                   }
-                  className="w-full px-3 py-1.5 text-sm border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  placeholder="San Francisco, CA"
+                  className="w-full px-3 py-1.5 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 />
               </div>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+              <div className="grid grid-cols-2 gap-2">
                 <div>
-                  <label className="block text-xs font-medium text-gray-600 mb-1">
+                  <label className="block text-xs font-medium text-gray-500 mb-1">
                     Start Date
                   </label>
                   <input
@@ -82,11 +90,11 @@ export function ExperienceForm() {
                       updateExperience(exp.id, { startDate: e.target.value })
                     }
                     placeholder="Jan 2022"
-                    className="w-full px-3 py-1.5 text-sm border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-3 py-1.5 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   />
                 </div>
                 <div>
-                  <label className="block text-xs font-medium text-gray-600 mb-1">
+                  <label className="block text-xs font-medium text-gray-500 mb-1">
                     End Date
                   </label>
                   <input
@@ -96,7 +104,7 @@ export function ExperienceForm() {
                       updateExperience(exp.id, { endDate: e.target.value })
                     }
                     placeholder="Present"
-                    className="w-full px-3 py-1.5 text-sm border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-3 py-1.5 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   />
                 </div>
               </div>
@@ -110,7 +118,7 @@ export function ExperienceForm() {
         <button
           type="button"
           onClick={addExperience}
-          className="flex items-center gap-1.5 px-3 py-2 text-sm text-blue-600 border border-blue-200 rounded-md hover:bg-blue-50 transition-colors w-full justify-center"
+          className="flex items-center gap-1.5 px-3 py-2.5 text-sm text-blue-500 border border-dashed border-blue-300 rounded-lg hover:bg-blue-50 hover:border-blue-400 hover:text-blue-600 transition-all w-full justify-center"
         >
           <Plus className="w-4 h-4" />
           Add Experience

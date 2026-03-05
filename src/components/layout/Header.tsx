@@ -12,17 +12,24 @@ interface HeaderProps {
 
 export function Header({ previewRef }: HeaderProps) {
   return (
-    <header className="flex items-center justify-between px-3 sm:px-4 py-2.5 border-b border-gray-200 bg-white shrink-0 gap-2">
-      <div className="flex items-center gap-2 shrink-0">
-        <FileText className="w-5 h-5 text-blue-600" />
-        <h1 className="text-base font-semibold text-gray-800 hidden sm:block">
-          Resume Builder
-        </h1>
+    <header className="flex items-center justify-between px-4 sm:px-5 py-2.5 border-b border-gray-200/80 bg-white/95 backdrop-blur-sm shadow-sm shrink-0 gap-3">
+      <div className="flex items-center gap-2.5 shrink-0">
+        <div className="flex items-center justify-center w-8 h-8 rounded-lg bg-gradient-to-br from-blue-50 to-indigo-100">
+          <FileText className="w-4 h-4 text-blue-600" />
+        </div>
+        <div className="hidden sm:block">
+          <h1 className="text-sm font-bold text-gray-900 leading-tight tracking-tight">
+            Resume Builder
+          </h1>
+          <p className="text-[10px] text-gray-400 leading-tight">
+            Markdown-powered
+          </p>
+        </div>
       </div>
-      <div className="flex items-center gap-1.5 sm:gap-2 overflow-x-auto">
+      <div className="flex items-center gap-1.5 sm:gap-2">
         <TemplateSelector />
         <DarkModeToggle />
-        <div className="w-px h-6 bg-gray-200 hidden sm:block" />
+        <div className="w-px h-6 bg-gray-200 mx-0.5 hidden sm:block" />
         <ImportJsonButton />
         <SaveJsonButton />
         <ExportPdfButton contentRef={previewRef} />

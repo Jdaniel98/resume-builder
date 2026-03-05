@@ -16,7 +16,7 @@ export function ExportPdfButton({ contentRef }: ExportPdfButtonProps) {
     <button
       type="button"
       onClick={handlePrint}
-      className="flex items-center gap-1.5 px-3 py-1.5 text-sm text-white bg-blue-600 rounded-md hover:bg-blue-700 transition-colors"
+      className="flex items-center gap-1.5 px-3.5 py-1.5 text-sm font-medium text-white bg-gradient-to-r from-blue-600 to-blue-700 rounded-lg hover:from-blue-700 hover:to-blue-800 shadow-sm hover:shadow transition-all"
       title="Export as PDF"
     >
       <FileDown className="w-4 h-4" />
