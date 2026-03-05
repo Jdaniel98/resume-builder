@@ -10,14 +10,28 @@ export function useKeyboardShortcuts(onPrint: () => void) {
       const mod = e.metaKey || e.ctrlKey;
       if (!mod) return;
 
+      // Save: Ctrl/Cmd + S
       if (e.key === 's') {
         e.preventDefault();
         saveResumeAsJson(resumeData);
       }
 
+      // Print/Export: Ctrl/Cmd + P
       if (e.key === 'p') {
         e.preventDefault();
         onPrint();
+      }
+
+      // Undo: Ctrl/Cmd + Z
+      if (e.key === 'z' && !e.shiftKey) {
+        e.preventDefault();
+        useResumeStore.temporal.getState().undo();
+      }
+
+      // Redo: Ctrl/Cmd + Shift + Z  or  Ctrl/Cmd + Y
+      if ((e.key === 'z' && e.shiftKey) || e.key === 'y') {
+        e.preventDefault();
+        useResumeStore.temporal.getState().redo();
       }
     };
 

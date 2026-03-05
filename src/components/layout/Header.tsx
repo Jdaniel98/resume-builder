@@ -4,6 +4,7 @@ import { DarkModeToggle } from '../actions/DarkModeToggle';
 import { SaveJsonButton } from '../actions/SaveJsonButton';
 import { ImportJsonButton } from '../actions/ImportJsonButton';
 import { ExportPdfButton } from '../actions/ExportPdfButton';
+import { UndoRedoButtons } from '../actions/UndoRedoButtons';
 import { FileText } from 'lucide-react';
 
 interface HeaderProps {
@@ -27,6 +28,8 @@ export function Header({ previewRef }: HeaderProps) {
         </div>
       </div>
       <div className="flex items-center gap-1.5 sm:gap-2">
+        <UndoRedoButtons />
+        <div className="w-px h-6 bg-gray-200 mx-0.5 hidden sm:block" />
         <TemplateSelector />
         <DarkModeToggle />
         <div className="w-px h-6 bg-gray-200 mx-0.5 hidden sm:block" />
