@@ -1,69 +1,130 @@
-/* Dark mode custom properties */
+/* ============================
+   Dark Mode Theme
+   Uses structural selectors for
+   robustness against class changes
+   ============================ */
+
+/* Custom properties */
 .dark-mode {
-  --bg-primary: #0f172a;
-  --bg-secondary: #1e293b;
-  --bg-card: #1e293b;
-  --bg-input: #0f172a;
-  --text-primary: #f1f5f9;
-  --text-secondary: #94a3b8;
-  --text-muted: #64748b;
-  --border-color: #334155;
-  --border-light: #1e293b;
-  --accent: #3b82f6;
-  --hover-bg: #334155;
+  --dm-bg-base: #0f172a;
+  --dm-bg-raised: #1e293b;
+  --dm-bg-input: #0f172a;
+  --dm-bg-hover: #334155;
+  --dm-text: #f1f5f9;
+  --dm-text-secondary: #94a3b8;
+  --dm-text-muted: #64748b;
+  --dm-text-faint: #475569;
+  --dm-border: #334155;
+  --dm-border-subtle: #1e293b;
+  --dm-accent: #3b82f6;
+  --dm-accent-muted: #1e3a5f;
 }
 
-/* Body & root */
+/* ---- Base ---- */
 body.dark-mode {
-  background-color: var(--bg-primary);
-  color: var(--text-primary);
+  background-color: var(--dm-bg-base);
+  color: var(--dm-text);
 }
 
-/* Header */
+/* ---- Header ---- */
 body.dark-mode header {
-  background-color: var(--bg-secondary) !important;
-  border-color: var(--border-color) !important;
+  background-color: var(--dm-bg-raised) !important;
+  border-color: var(--dm-border) !important;
+  backdrop-filter: none !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4) !important;
 }
 
 body.dark-mode header h1 {
-  color: var(--text-primary);
+  color: var(--dm-text) !important;
 }
 
-/* Editor panel background */
-body.dark-mode .bg-gray-50 {
-  background-color: var(--bg-primary) !important;
+body.dark-mode header p {
+  color: var(--dm-text-muted) !important;
 }
 
-/* Cards, panels, white backgrounds */
-body.dark-mode .bg-white {
-  background-color: var(--bg-secondary) !important;
+/* Header logo badge */
+body.dark-mode header [class*="from-blue-50"] {
+  background: var(--dm-accent-muted) !important;
 }
 
-/* Nested entry cards (experience, education items) */
-body.dark-mode .bg-gray-50 .bg-gray-50 {
-  background-color: var(--bg-primary) !important;
+/* Header divider */
+body.dark-mode header [class*="w-px"] {
+  background-color: var(--dm-border) !important;
 }
 
-/* Borders */
-body.dark-mode .border-gray-200 {
-  border-color: var(--border-color) !important;
+/* ---- Form inputs, textareas, selects ---- */
+body.dark-mode input,
+body.dark-mode textarea,
+body.dark-mode select {
+  background-color: var(--dm-bg-input) !important;
+  color: var(--dm-text) !important;
+  border-color: var(--dm-border) !important;
 }
 
-body.dark-mode .border-gray-100 {
-  border-color: var(--border-light) !important;
+body.dark-mode input::placeholder,
+body.dark-mode textarea::placeholder {
+  color: var(--dm-text-faint) !important;
 }
 
-body.dark-mode .border-gray-300 {
-  border-color: var(--border-color) !important;
+body.dark-mode input:focus,
+body.dark-mode textarea:focus,
+body.dark-mode select:focus {
+  border-color: var(--dm-accent) !important;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.3) !important;
 }
 
-body.dark-mode .border-blue-200 {
-  border-color: #1e3a5f !important;
+/* ---- Editor panel ---- */
+body.dark-mode [class*="overflow-y-auto"][class*="bg-gray-50"] {
+  background-color: var(--dm-bg-base) !important;
 }
 
-/* Text colors */
+/* ---- Section cards (white cards with rounded-xl) ---- */
+body.dark-mode [class*="rounded-xl"][class*="bg-white"] {
+  background-color: var(--dm-bg-raised) !important;
+  border-color: var(--dm-border) !important;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Section card header button */
+body.dark-mode [class*="rounded-xl"][class*="bg-white"] > button {
+  color: var(--dm-text) !important;
+}
+
+body.dark-mode [class*="rounded-xl"][class*="bg-white"] > button:hover {
+  background-color: var(--dm-bg-hover) !important;
+}
+
+/* Section icon badges (blue-50 in a rounded-md) */
+body.dark-mode [class*="rounded-md"][class*="bg-blue-50"] {
+  background-color: var(--dm-accent-muted) !important;
+}
+
+/* ---- Nested entry cards (Position 1, Education 1, etc.) ---- */
+body.dark-mode [class*="rounded-lg"][class*="bg-gray-50"] {
+  background-color: var(--dm-bg-base) !important;
+  border-color: var(--dm-border-subtle) !important;
+}
+
+body.dark-mode [class*="rounded-lg"][class*="bg-gray-50"]:hover {
+  border-color: var(--dm-border) !important;
+}
+
+/* Entry card labels (POSITION 1, etc.) */
+body.dark-mode [class*="uppercase"][class*="tracking-wider"] {
+  color: var(--dm-text-muted) !important;
+}
+
+/* ---- Text overrides ---- */
+body.dark-mode label {
+  color: var(--dm-text-muted) !important;
+}
+
+body.dark-mode .text-gray-900 {
+  color: var(--dm-text) !important;
+}
+
 body.dark-mode .text-gray-800 {
-  color: var(--text-primary) !important;
+  color: var(--dm-text) !important;
 }
 
 body.dark-mode .text-gray-700 {
@@ -71,113 +132,197 @@ body.dark-mode .text-gray-700 {
 }
 
 body.dark-mode .text-gray-600 {
-  color: var(--text-secondary) !important;
+  color: var(--dm-text-secondary) !important;
 }
 
 body.dark-mode .text-gray-500 {
-  color: var(--text-muted) !important;
+  color: var(--dm-text-muted) !important;
 }
 
+/* text-gray-400 should be LIGHTER in dark mode, not darker */
 body.dark-mode .text-gray-400 {
-  color: #475569 !important;
+  color: var(--dm-text-muted) !important;
 }
 
-/* Form inputs */
-body.dark-mode input,
-body.dark-mode textarea,
-body.dark-mode select {
-  background-color: var(--bg-input) !important;
-  color: var(--text-primary) !important;
-  border-color: var(--border-color) !important;
+body.dark-mode .text-gray-300 {
+  color: var(--dm-text-faint) !important;
 }
 
-body.dark-mode input::placeholder,
-body.dark-mode textarea::placeholder {
-  color: var(--text-muted) !important;
+/* ---- Buttons ---- */
+
+/* Header action buttons (Import, Save) */
+body.dark-mode header button[class*="border-gray-200"] {
+  background-color: var(--dm-bg-base) !important;
+  color: var(--dm-text-secondary) !important;
+  border-color: var(--dm-border) !important;
 }
 
-body.dark-mode input:focus,
-body.dark-mode textarea:focus,
-body.dark-mode select:focus {
-  border-color: var(--accent) !important;
+body.dark-mode header button[class*="border-gray-200"]:hover {
+  background-color: var(--dm-bg-hover) !important;
+  border-color: var(--dm-text-faint) !important;
 }
 
-/* Buttons */
-body.dark-mode button.hover\:bg-gray-50:hover {
-  background-color: var(--hover-bg) !important;
+/* Export PDF gradient button — darken shadow */
+body.dark-mode button[class*="bg-gradient-to-r"] {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4) !important;
 }
 
-body.dark-mode button.hover\:bg-gray-100:hover,
+/* Dark mode toggle — amber sun icon */
+body.dark-mode .dark-toggle {
+  color: #fbbf24 !important;
+}
+
 body.dark-mode .dark-toggle:hover {
-  background-color: var(--hover-bg) !important;
+  background-color: var(--dm-bg-hover) !important;
 }
 
-body.dark-mode .hover\:bg-blue-50:hover {
-  background-color: #1e3a5f !important;
+/* Dashed add buttons */
+body.dark-mode button[class*="border-dashed"] {
+  border-color: var(--dm-accent-muted) !important;
+  color: var(--dm-accent) !important;
+  background-color: transparent !important;
 }
 
-/* Action buttons in header */
-body.dark-mode button.border-gray-300 {
-  background-color: var(--bg-primary) !important;
-  color: var(--text-secondary) !important;
-  border-color: var(--border-color) !important;
+body.dark-mode button[class*="border-dashed"]:hover {
+  background-color: rgba(59, 130, 246, 0.1) !important;
+  border-color: var(--dm-accent) !important;
 }
 
-body.dark-mode button.border-gray-300:hover {
-  background-color: var(--hover-bg) !important;
+/* Delete / remove buttons */
+body.dark-mode button[title="Remove"] {
+  color: var(--dm-text-faint) !important;
 }
 
-/* Skill tags */
-body.dark-mode .bg-blue-100 {
-  background-color: #1e3a5f !important;
+body.dark-mode button[title="Remove"]:hover {
+  color: #ef4444 !important;
+  background-color: rgba(239, 68, 68, 0.1) !important;
+}
+
+body.dark-mode button[title="Remove bullet"] {
+  color: var(--dm-text-faint) !important;
+}
+
+body.dark-mode button[title="Remove bullet"]:hover {
+  color: #ef4444 !important;
+}
+
+/* Add bullet text link */
+body.dark-mode button[class*="text-blue-500"][class*="text-xs"] {
+  color: var(--dm-accent) !important;
+}
+
+/* Bullet numbers */
+body.dark-mode span[class*="text-blue-400"][class*="font-bold"] {
+  color: var(--dm-accent) !important;
+}
+
+/* Empty state text */
+body.dark-mode p[class*="text-center"][class*="py-4"] {
+  color: var(--dm-text-faint) !important;
+}
+
+/* ---- Skill tags ---- */
+body.dark-mode span[class*="rounded-full"][class*="bg-blue-50"] {
+  background-color: var(--dm-accent-muted) !important;
   color: #93c5fd !important;
+  border-color: rgba(59, 130, 246, 0.3) !important;
 }
 
-/* Divider in header */
-body.dark-mode .bg-gray-200 {
-  background-color: var(--border-color) !important;
+body.dark-mode span[class*="rounded-full"][class*="bg-blue-50"]:hover {
+  background-color: rgba(59, 130, 246, 0.25) !important;
 }
 
-/* Resize handle */
-body.dark-mode [data-separator] {
-  background-color: var(--border-color) !important;
+body.dark-mode span[class*="rounded-full"] button {
+  color: #60a5fa !important;
 }
 
-/* Mobile tab bar */
-body.dark-mode .mobile-tab-bar {
-  background-color: var(--bg-secondary) !important;
-  border-color: var(--border-color) !important;
+/* ---- Template selector ---- */
+body.dark-mode [class*="pointer-events-none"] svg {
+  color: var(--dm-text-muted) !important;
 }
 
-/* Scrollbar */
-body.dark-mode ::-webkit-scrollbar {
-  width: 8px;
+/* ---- Preview panel ---- */
+body.dark-mode .preview-bg {
+  background-color: #111827 !important;
 }
 
-body.dark-mode ::-webkit-scrollbar-track {
-  background: var(--bg-primary);
+/* Paper container shadow in dark mode */
+body.dark-mode .preview-bg > div {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5) !important;
 }
 
-body.dark-mode ::-webkit-scrollbar-thumb {
-  background: var(--border-color);
-  border-radius: 4px;
-}
-
-body.dark-mode ::-webkit-scrollbar-thumb:hover {
-  background: var(--text-muted);
-}
-
-/* Preview panel - keep white for resume readability */
+/* Resume content — KEEP WHITE for readability */
 body.dark-mode .resume-preview {
   background-color: #ffffff !important;
   color: #1a1a1a !important;
 }
 
-/* Don't apply dark mode to print */
+/* Ensure template colors inside preview stay intact */
+body.dark-mode .resume-preview * {
+  color: inherit;
+}
+
+/* ---- Resize handle ---- */
+body.dark-mode [data-separator] {
+  background-color: var(--dm-border-subtle) !important;
+}
+
+body.dark-mode [data-separator]:hover {
+  background-color: var(--dm-accent-muted) !important;
+}
+
+body.dark-mode [data-separator] svg {
+  color: var(--dm-text-faint) !important;
+}
+
+body.dark-mode [data-separator]:hover svg {
+  color: var(--dm-accent) !important;
+}
+
+/* ---- Mobile tab bar ---- */
+body.dark-mode .mobile-tab-bar {
+  background-color: var(--dm-bg-raised) !important;
+  border-color: var(--dm-border) !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4) !important;
+}
+
+body.dark-mode .mobile-tab-bar button {
+  color: var(--dm-text-faint) !important;
+}
+
+body.dark-mode .mobile-tab-bar button[class*="text-blue-600"] {
+  color: var(--dm-accent) !important;
+}
+
+/* ---- Scrollbar ---- */
+body.dark-mode ::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+body.dark-mode ::-webkit-scrollbar-track {
+  background: var(--dm-bg-base);
+}
+
+body.dark-mode ::-webkit-scrollbar-thumb {
+  background: var(--dm-border);
+  border-radius: 9999px;
+}
+
+body.dark-mode ::-webkit-scrollbar-thumb:hover {
+  background: var(--dm-text-faint);
+}
+
+body.dark-mode * {
+  scrollbar-color: var(--dm-border) var(--dm-bg-base);
+}
+
+/* ---- Print: strip dark mode ---- */
 @media print {
   body.dark-mode,
   body.dark-mode * {
     background-color: transparent !important;
     color: inherit !important;
+    box-shadow: none !important;
   }
 }
