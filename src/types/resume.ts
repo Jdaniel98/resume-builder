@@ -51,4 +51,4 @@ export interface ResumeData {
   projects: Project[];
 }
 
-export type TemplateName = 'classic' | 'modern' | 'minimal';
+export type TemplateName = 'classic' | 'modern' | 'minimal' | 'professional' | 'creative';

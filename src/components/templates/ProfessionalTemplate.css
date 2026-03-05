@@ -1,0 +1,143 @@
+.resume-preview[data-template="professional"] {
+  font-family: 'Garamond', 'Palatino Linotype', 'Book Antiqua', serif;
+  color: #1f2937;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2.5rem;
+  line-height: 1.55;
+}
+
+.resume-preview[data-template="professional"] h1 {
+  font-size: 1.85rem;
+  font-weight: 700;
+  color: #111827;
+  margin: 0 0 0.2rem;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.resume-preview[data-template="professional"] h1 + p {
+  font-size: 1rem;
+  color: #92400e;
+  font-weight: 500;
+  margin: 0.15rem 0;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+.resume-preview[data-template="professional"] h1 + p + p {
+  font-size: 0.82rem;
+  color: #6b7280;
+  margin: 0.15rem 0 0.75rem;
+  text-align: center;
+  letter-spacing: 0.01em;
+}
+
+.resume-preview[data-template="professional"] h1 + p + p::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 2px;
+  background: #b45309;
+  margin: 0.75rem auto 0;
+}
+
+.resume-preview[data-template="professional"] h2 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #111827;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin: 1.5rem 0 0.5rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 1.5px solid #d1d5db;
+  position: relative;
+}
+
+.resume-preview[data-template="professional"] h2::after {
+  content: '';
+  position: absolute;
+  bottom: -1.5px;
+  left: 0;
+  width: 40px;
+  height: 1.5px;
+  background: #b45309;
+}
+
+.resume-preview[data-template="professional"] h3 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 0.65rem 0 0.1rem;
+}
+
+.resume-preview[data-template="professional"] p {
+  margin: 0.2rem 0;
+  font-size: 0.88rem;
+  color: #374151;
+}
+
+.resume-preview[data-template="professional"] ul {
+  margin: 0.2rem 0;
+  padding-left: 1.25rem;
+}
+
+.resume-preview[data-template="professional"] li {
+  font-size: 0.88rem;
+  margin: 0.15rem 0;
+  color: #374151;
+}
+
+.resume-preview[data-template="professional"] li::marker {
+  color: #b45309;
+}
+
+.resume-preview[data-template="professional"] a {
+  color: #92400e;
+  text-decoration: none;
+}
+
+.resume-preview[data-template="professional"] a:hover {
+  text-decoration: underline;
+}
+
+.resume-preview[data-template="professional"] strong {
+  color: #111827;
+  font-weight: 700;
+}
+
+.resume-preview[data-template="professional"] em {
+  color: #6b7280;
+  font-style: italic;
+}
+
+@media print {
+  .resume-preview[data-template="professional"] {
+    padding: 0;
+    font-size: 10pt;
+  }
+
+  .resume-preview[data-template="professional"] h1 {
+    font-size: 15pt;
+  }
+
+  .resume-preview[data-template="professional"] h2 {
+    font-size: 10pt;
+    margin-top: 10pt;
+  }
+
+  .resume-preview[data-template="professional"] h3 {
+    font-size: 10pt;
+  }
+
+  .resume-preview[data-template="professional"] p,
+  .resume-preview[data-template="professional"] li {
+    font-size: 9.5pt;
+  }
+
+  .resume-preview[data-template="professional"] h3,
+  .resume-preview[data-template="professional"] ul {
+    break-inside: avoid;
+  }
+}

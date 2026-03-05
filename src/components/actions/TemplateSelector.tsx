@@ -5,6 +5,8 @@ const templates: { value: TemplateName; label: string }[] = [
   { value: 'classic', label: 'Classic' },
   { value: 'modern', label: 'Modern' },
   { value: 'minimal', label: 'Minimal' },
+  { value: 'professional', label: 'Professional' },
+  { value: 'creative', label: 'Creative' },
 ];
 
 export function TemplateSelector() {
